@@ -1,0 +1,11 @@
+name=Assassins
+version=1.69
+motd=./files/motd.txt
+admin=./files/admin.txt
+admin_email=<cassassi@student.42.fr>, <vmercier@student.42.fr>, <nsimon@student.42.fr>
+info=./files/info.txt
+max=5000
+oper_user=admin
+oper_password=admin
+ping=60
+timeout=300
