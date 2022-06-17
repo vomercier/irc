@@ -1,19 +1,19 @@
 #include "Command.hpp"
 
-std::vector<std::string> ftsplit(std::string str, std::string delimiter)
-{
-	std::vector<std::string> values = std::vector<std::string>();
+// std::vector<std::string> ftsplit(std::string str, std::string delimiter)
+// {
+// 	std::vector<std::string> values = std::vector<std::string>();
 
-	size_t position;
-	while ((position = str.find(delimiter)) != std::string::npos)
-	{
-		values.push_back(str.substr(0, position));
-		str.erase(0, position + delimiter.length());
-	}
-	values.push_back(str);
+// 	size_t position;
+// 	while ((position = str.find(delimiter)) != std::string::npos)
+// 	{
+// 		values.push_back(str.substr(0, position));
+// 		str.erase(0, position + delimiter.length());
+// 	}
+// 	values.push_back(str);
 
-	return values;
-}
+// 	return values;
+// }
 
 Command::Command(Client *client, Server *server, std::string message)
 	: client(client), server(server), query(message)
@@ -36,5 +36,5 @@ Command::Command(Client *client, Server *server, std::string message)
 		prefix[index] = std::toupper(prefix[index]);
 }
 
-
+Client &Command::getClient() { return *client; }
 std::vector<std::string> Command::getParameters() { return parameters; }

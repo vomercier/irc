@@ -14,7 +14,8 @@ class Client
 		std::string hostname;
 		std::string realname;
         time_t last_ping;
-        int fd;
+        struct pollfd fd;
+        // int fd;
         void write(std::string message);
 
         
@@ -26,7 +27,7 @@ class Client
         void setNickname(std::string new_nick);
         void setStatus(std::string new_status);
         std::string get_statut();
-        int getFd();
+        struct pollfd getFd();
 		void setUsername(std::string username);
 		void setRealname(std::string realname);
         void setLastPing(time_t lastping);
@@ -38,7 +39,7 @@ class Client
 		std::string getUsername();
 		std::string getRealname();
 
-        void Client::sendTo(Client &toClient, std::string message);
+        // void Client::sendTo(Client &toClient, std::string message);
 
 };
 

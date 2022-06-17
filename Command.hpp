@@ -68,10 +68,10 @@
 /*
 **  reponse for command file
 */
-# define RPL_WELCOME(nick) (":Welcome to the Internet Relay Network " + nick + "\r\n")
-# define RPL_YOURHOST(servername, version) (":Your host is " + servername + ", running version " + version + "\r\n")
-# define RPL_MYINFO(servername, version, usr_modes, chann_modes) (":" + servername + " " + version + " " + usr_modes + " " + chann_modes + "\r\n")
-# define RPL_CREATED(date) (":This server was created " + date + "\r\n");
+// # define RPL_WELCOME(nick) (":Welcome to the Internet Relay Network " + nick + "\r\n")
+// # define RPL_YOURHOST(servername, version) (":Your host is " + servername + ", running version " + version + "\r\n")
+// # define RPL_MYINFO(servername, version, usr_modes, chann_modes) (":" + servername + " " + version + " " + usr_modes + " " + chann_modes + "\r\n")
+// # define RPL_CREATED(date) (":This server was created " + date + "\r\n");
 # define RPL_BOUNCE(server_name, port) ("Try server " + server_name + ", port " + port + "\r\n")
 # define RPL_NONE() ("\r\n") //300
 # define RPL_USERHOST(userhost_list) (userhost_list + "\r\n") //<réponse> ::= <pseudo>['*'] '=' <'+'|'-'><hôte>
@@ -217,8 +217,8 @@ class Command
 		void setStop(bool st);
 		bool getStop();
 
-		void reply(Client &user, unsigned short code, std::string arg1 = "", std::string arg2 = "", std::string arg3 = "", std::string arg4 = "", std::string arg5 = "", std::string arg6 = "", std::string arg7 = "");
-		void reply(unsigned short code, std::string arg1 = "", std::string arg2 = "", std::string arg3 = "", std::string arg4 = "", std::string arg5 = "", std::string arg6 = "", std::string arg7 = "");
+		// void reply(Client &user, unsigned short code, std::string arg1 = "", std::string arg2 = "", std::string arg3 = "", std::string arg4 = "", std::string arg5 = "", std::string arg6 = "", std::string arg7 = "");
+		// void reply(unsigned short code, std::string arg1 = "", std::string arg2 = "", std::string arg3 = "", std::string arg4 = "", std::string arg5 = "", std::string arg6 = "", std::string arg7 = "");
 };
 
 
